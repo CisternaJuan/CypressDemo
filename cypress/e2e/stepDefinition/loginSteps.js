@@ -1,10 +1,6 @@
-import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
+import { Given, When } from 'cypress-cucumber-preprocessor/steps';
 
-Given('carga la pagina web', () => { 
-    cy.visit('https://www.google.com/')
-})
-
-When('ingreso las palabras y las busco', (datatable) => {
+Given('ingreso las palabras y las busco', (datatable) => {
     datatable.hashes().forEach(element => {
         cy.get('div[class="SDkEP"]').click()
         cy.get('div[class="SDkEP"]').type(element.palabra)
@@ -12,6 +8,6 @@ When('ingreso las palabras y las busco', (datatable) => {
     });
 })
 
-Then('carga label {string}', (texto) => {
+When('carga label {string}', (texto) => {
     cy.contains(texto)
 })
