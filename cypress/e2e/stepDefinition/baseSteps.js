@@ -1,5 +1,9 @@
-import { Given } from 'cypress-cucumber-preprocessor/steps';
+import { Before , After } from "cypress-cucumber-preprocessor/steps";
 
-Given('carga la pagina web', () => { 
-    cy.visit('https://www.google.com/')
+Before(()=>{
+    cy.reload() 
+})
+
+After(()=>{
+    cy.reload() 
 })
