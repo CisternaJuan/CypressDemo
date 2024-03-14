@@ -1,8 +1,10 @@
-Feature: Login to Application
+Feature: Ingreso a página web y se hacen validaciones
+
+Background:
+    Given carga la pagina web
 
     Scenario: Validar carga
-    Given carga la pagina web
-    When ingreso las palabras y las busco
+    Given ingreso las palabras y las busco
         |palabra|
         |prueba |
     Then carga label 'Cerca de'
