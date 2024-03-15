@@ -3,7 +3,7 @@ const URL = 'https://www.google.com/'
 class PrincipalPage {
 
     static loadPage() {
-        cy.visit(URL)
+        cy.visit(Cypress.env('URLGOOGLE'))
     }
 }
 

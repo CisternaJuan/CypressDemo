@@ -8,4 +8,7 @@ module.exports = defineConfig({
     },
 	specPattern: "cypress/e2e/*.feature",
   },
+  env: {
+    "URLGOOGLE":"https://www.google.com/"
+  }
 });
